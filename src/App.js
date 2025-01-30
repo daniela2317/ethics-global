@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import ComplaintTracker from './Components/complaintTracker';
+import LandingPage from './Components/landingPage';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <section>
+      <LandingPage />
+    </section>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-ford-blue">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
+        <h1 className="text-4xl font-bold text-center text-white mb-8">Sistema de Seguimiento de Denuncias</h1>
+        <ComplaintTracker />
+      </div>
+    </main>
     </div>
-  );
+  )
 }
-
-export default App;
